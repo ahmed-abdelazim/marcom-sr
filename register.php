@@ -32,8 +32,8 @@ $brands = brands();
 
 
 
-
-            <select name="cars">
+        <div >Please Select product Brand</div>
+            <select name="brands">
                 <?php
                 foreach ($brands['data'] as $key => $val){
                 echo '<option value="'
@@ -41,14 +41,16 @@ $brands = brands();
                 .'"'
                 ."onClick=getSummary('"
                 .$brands['data'][$key]['brand_id']
-                ."','summary','models.php')"
+                ."','summary','type.php')"
                 .'>'
                 .$brands['data'][$key]['brand_name']
                 ."</option>";
                 }
                 ?>
             </select>
-        <a onclick="getSummary('models.php','summary','1')">View Text</a>
-        <div id="summary">Please Select product Brand</div>
+
+        <div id="summary"></div>
+        <div id="type"></div>
+        <div id="model"></div>
     </body>
 </html>

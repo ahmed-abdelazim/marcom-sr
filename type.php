@@ -17,6 +17,22 @@ if (curl_errno($ch)) {
 }
 curl_close ($ch);
 
-print_r($result);
-
+//print_r($result);
+$result=json_decode($result, true);
 ?>
+
+            <select name="type">
+                <?php
+                foreach ($result['data'] as $key => $val){
+                echo '<option value="'
+                .$result['data'][$key]['type_id']
+                .'"'
+                ."onClick=getSummary('"
+                .$result['data'][$key]['type_id']
+                ."','type','models.php')"
+                .'>'
+                .$result['data'][$key]['type_name']
+                ."</option>";
+                }
+                ?>
+            </select>
