@@ -21,14 +21,14 @@ curl_close ($ch);
 $result=json_decode($result, true);
 //print_r($result);
 ?>
-
+<div >Please Select product Model</div>
             <select name="models">
                 <?php
                 foreach ($result['data'] as $key => $val){
                 echo '<option value="'
                 .$result['data'][$key]['model_id']
                 .'"'
-                ."onClick=getSummary('"
+                ."onClick=showSn('"
                 .$result['data'][$key]['model_id']
                 ."','model','type.php')"
                 .'>'

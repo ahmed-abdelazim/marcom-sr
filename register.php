@@ -26,6 +26,15 @@ $brands = brands();
        });
     
     }
+
+    function showSn() {
+            var x = document.getElementById("showSn");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "block";
+            }
+    } 
     </script>
     </head>
     <body>
@@ -52,5 +61,10 @@ $brands = brands();
         <div id="summary"></div>
         <div id="type"></div>
         <div id="model"></div>
+        <div id="showSn" style = "display: none;">
+        <div> Enter serial number </div>
+            <input type="text" name="Serial number">
+            <input type="submit" value="Submit">
+        </div>
     </body>
 </html>
