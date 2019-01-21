@@ -39,10 +39,10 @@ $brands = brands();
     </head>
     <body>
 
+        <form action="send.php" method="POST">
 
-
-        <div >Please Select product Brand</div>
-            <select name="brands">
+            <select name="brand">
+                <option value="0">Please Select product Brand</option>
                 <?php
                 foreach ($brands['data'] as $key => $val){
                 echo '<option value="'
@@ -58,13 +58,14 @@ $brands = brands();
                 ?>
             </select>
 
-        <div id="summary"></div>
-        <div id="type"></div>
-        <div id="model"></div>
-        <div id="showSn" style = "display: none;">
-        <div> Enter serial number </div>
-            <input type="text" name="Serial number">
-            <input type="submit" value="Submit">
-        </div>
+            <div id="summary"></div>
+            <div id="type"></div>
+            <div id="model"></div>
+            <div id="showSn" style = "display: none;">
+            <div> Enter serial number </div>
+                <input type="text" name="serial">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
     </body>
 </html>

@@ -20,8 +20,9 @@ curl_close ($ch);
 //print_r($result);
 $result=json_decode($result, true);
 ?>
-<div >Please Select product Type</div>
+
             <select name="type">
+                <option value="0">Please Select product Type</option>
                 <?php
                 foreach ($result['data'] as $key => $val){
                 echo '<option value="'

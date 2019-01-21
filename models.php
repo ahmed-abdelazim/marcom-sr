@@ -20,9 +20,15 @@ curl_close ($ch);
 
 $result=json_decode($result, true);
 //print_r($result);
+
+if ($result['data'] == null){
+    echo "<script>showSn();</script>";
+    exit("There is no models for this type");
+}
 ?>
-<div >Please Select product Model</div>
-            <select name="models">
+
+            <select name="model">
+            <option value="0">Please Select product Model</option>
                 <?php
                 foreach ($result['data'] as $key => $val){
                 echo '<option value="'
