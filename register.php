@@ -39,7 +39,7 @@ $brands = brands();
     </head>
     <body>
 
-        <form action="send.php" method="POST">
+        <form action="verify.php" method="POST">
 
             <select name="brand">
                 <option value="0">Please Select product Brand</option>
