@@ -2,7 +2,8 @@
 print_r($_POST);
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, 'http://marcomtrade.com/sr_new/controllers/products?_method=validate&brand_id=7&type_id=3&model_id=12&serial=test');
+
+curl_setopt($ch, CURLOPT_URL, 'http://marcomtrade.com/sr_new/controllers/products?_method=validate&brand_id='.$_POST["brand"].'&type_id='.$_POST["type"].'&model_id='.$_POST["model"].'&serial='.$_POST["serial"]);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POST, 1);
 
