@@ -1,1 +1,1 @@
-# marcom-sr
+# Marcomtrade company Product registration script
