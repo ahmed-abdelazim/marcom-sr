@@ -1,5 +1,5 @@
 <?php
-print_r($_POST);
+//print_r($_POST);
 $ch = curl_init();
 
 
@@ -18,5 +18,7 @@ if (curl_errno($ch)) {
     echo 'Error:' . curl_error($ch);
 }
 curl_close ($ch);
-print_r($result);
+$result=json_decode($result, true);
+//print_r($result);
+echo $result['errors'][0];
 ?>
