@@ -27,19 +27,18 @@ if ($result['data'] == null){
 }
 ?>
 
-            <select name="model">
+            <select id="list2" name="model">
             <option value="0">Please Select product Model</option>
                 <?php
                 foreach ($result['data'] as $key => $val){
                 echo '<option value="'
                 .$result['data'][$key]['model_id']
                 .'"'
-                ."onClick=showSn('"
-                .$result['data'][$key]['model_id']
-                ."','model','type.php')"
+                
                 .'>'
                 .$result['data'][$key]['model_name']
                 ."</option>";
                 }
                 ?>
             </select>
+            <script src="script.js"></script>

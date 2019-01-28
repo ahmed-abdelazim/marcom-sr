@@ -21,19 +21,19 @@ curl_close ($ch);
 $result=json_decode($result, true);
 ?>
 
-            <select name="type">
+            <select id="list1" name="type">
                 <option value="0">Please Select product Type</option>
                 <?php
                 foreach ($result['data'] as $key => $val){
                 echo '<option value="'
                 .$result['data'][$key]['type_id']
                 .'"'
-                ."onClick=getSummary('"
-                .$result['data'][$key]['type_id']
-                ."','type','models.php')"
                 .'>'
                 .$result['data'][$key]['type_name']
                 ."</option>";
                 }
                 ?>
             </select>
+
+    <script src="script.js"></script>
+            
