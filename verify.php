@@ -1,5 +1,5 @@
 <?php
-print_r($_POST);
+//print_r($_POST);
 $ch = curl_init();
 
 
@@ -9,7 +9,7 @@ curl_setopt($ch, CURLOPT_POST, 1);
 
 $headers = array();
 $headers[] = 'Host: marcomtrade.com';
-$headers[] = '_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGkiOiJjb250cm9sbGVycy9kYXRhIiwibmFtZSI6IlByb2R1Y3QgUmVnaXN0cmF0aW9uIiwiaWF0IjoxNTE2MjM5MDIyfQ.2w8y2yAisHwc90PB3KnXbbT-3HCrcs3XBaLG674R870';
+$headers[] = '_token: AUTH_TOKEN';
 $headers[] = 'Content-Type: application/json';
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 

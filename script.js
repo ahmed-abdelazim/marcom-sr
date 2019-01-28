@@ -1,9 +1,9 @@
-
-
+// Listners
 document.getElementById("list").onchange = function listQ(){getSummary(this.value,'summary','type.php' );};
 document.getElementById("list1").onchange = function listQ(){getSummary(this.value,'type','models.php' );};
 document.getElementById("list2").onchange = showSn;
 
+// perform AJAX request to the data source, id is tag id, divID is the id of the div we want to write the data to.
     function getSummary(id,divId,myUrl)
     {
         $( ".hello" ).empty();
@@ -20,7 +20,7 @@ document.getElementById("list2").onchange = showSn;
        });
     
     }
-
+// to show the serial field and submit button
     function showSn() {
             var x = document.getElementById("showSn");
             if (x.style.display === "none") {

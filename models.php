@@ -8,7 +8,7 @@ curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 
 $headers = array();
 $headers[] = 'Host: marcomtrade.com';
-$headers[] = '_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGkiOiJjb250cm9sbGVycy9kYXRhIiwibmFtZSI6IlByb2R1Y3QgUmVnaXN0cmF0aW9uIiwiaWF0IjoxNTE2MjM5MDIyfQ.2w8y2yAisHwc90PB3KnXbbT-3HCrcs3XBaLG674R870';
+$headers[] = '_token: AUTH_TOKEN';
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 $result = curl_exec($ch);
