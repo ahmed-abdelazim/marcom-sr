@@ -3,7 +3,7 @@ document.getElementById("list").onchange = function listQ(){getSummary(this.valu
 document.getElementById("list1").onchange = function listQ(){getSummary(this.value,'type','models.php' );};
 document.getElementById("list2").onchange = showSn;
 
-// perform AJAX request to the data source, id is tag id, divID is the id of the div we want to write the data to.
+// perform AJAX request to the data source, id is added in GET request, divID is the id of the div we want to write the data to.
     function getSummary(id,divId,myUrl)
     {
         $( ".hello" ).empty();
