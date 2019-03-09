@@ -37,7 +37,7 @@ $types = array("ais","ecdis","epirb","gmdssb","gmdssr","gyro","osr","sart","sbm"
 
             <label for="myserial" class="mt-2">Enter Certificate number </label>
                 <input type="text" name="serial"  id="myserial" class="form-control">
-                <input type="submit" value="Submit"  class="btn btn-primary mt-3">
+                <input type="submit" value="Submit"  class="btn btn-secondary mt-3">
             </div>
         </form>
     </body>
